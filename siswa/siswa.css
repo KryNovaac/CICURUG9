@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+
+*, html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-size: cover;
+    background-color: rgb(113, 115, 255);
+}
+
+
+.navbar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding: 15px;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 998;
+    
+}
+.c1-name {
+    color: aliceblue;
+    margin-left: 500px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-links a {
+    font-size: 18px;
+    color: rgba(254, 248, 248, 0.514);
+    font-weight: 500;
+    text-decoration: none;
+    margin: -25px 50px 0 0;
+    padding: 0 30px 0 50px;
+    transition: 500ms linear;
+}
+.nav-links a:hover {
+    color: white;
+    opacity: 0.9;
+    font-size: 18.5px;
+    transform: scale(1.5);
+}
+
+
+li {
+    list-style-type: none;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+
+.navbar .logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .toggler-navbar {
+    margin-right: 15px;
+}
+
+
+@keyframes warna-font {
+    0% {
+      color: rgba(255, 255, 255, 0.247);
+    }
+  
+    25% {
+      color: rgba(228, 228, 228, 0.324);
+    }
+  
+    50% {
+      color: rgb(223, 223, 223);
+    }
+  
+    75% {
+      color: rgba(0, 0, 255, 0.194);
+    }
+  
+    100% {
+      color: rgba(255, 255, 255, 0.331);
+    }
+
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  
+  .box-1 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .box-1:hover .info {
+    opacity: 1;
+  }
+  
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
+  
+  .info p {
+    text-align: center;
+    color: white;
+  }
+
+  
+  .siswa-text{
+    color: white;
+    padding-top: 100px;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    text-shadow: 0 0 3px #ffffff;
+  }
+
+  #container {
+    margin-top: 120px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+    height: 500px;
+    font-family: "Figtree", sans-serif;
+    transition: all 400ms;
+}
+.box {
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-style: inherit;
+}
+
+.box::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transform: all 400px;
+    border-radius: 5px;
+    border-style: inherit;
+    background: linear-gradient(90deg, rgb(135, 150, 255), rgb(206, 150, 255) 100%);
+    transition: all 0.5s 
+}
+
+.container:hover .box {
+    filter: grayscale(100%)
+    opacity(24%);
+}
+.box:hover:after {
+    transform:translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+#container .box:hover {
+    filter: grayscale(0%) opacity(100%);
+}
+
+.box:nth-child(odd) {
+    transform: translateY(-16px);
+}
+.box:nth-child(even) {
+    transform: translateY(16px);
+}
+#container:has(.box-1:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-2:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-3:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-6:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-7:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-8:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-9:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-10:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-11:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-12:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-13:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-14:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-15:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-16:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-17:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-18:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-19:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-20:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-21:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-22:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-23:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-24:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-25:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-26:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-27:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-28:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-29:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+#container:has(.box-30:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+}
+#container:has(.box-31:hover) {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-32:hover) {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#container:has(.box-33:hover) {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+#container:has(.box-34:hover) {
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+}
+
+.box-1 {
+  background-image: url(img/annafi.jpg);
+}
+.box-2 {
+  background-image: url(img/danuar.jpg);
+}
+.box-3 {
+  background-image: url(img/davina.jpg);
+}
+.box-4 {
+  background-image: url(img/della.jpg);
+}
+.box-5 {
+  background-image: url(img/diaz.jpg);
+}
+.box-6 {
+  background-image: url(img/dwi\ azis.jpg);
+}
+.box-7 {
+  background-image: url(img/danuar.jpg);
+}
+.box-8 {
+  background-image: url(img/farel\ yanuar.jpg);
+}
+.box-9 {
+  background-image: url(img/fauziyyah.jpg);
+}
+.box-10 {
+  background-image: url(img/inggit.jpg);
+}
+.box-11 {
+  background-image: url(img/lulu.jpg);
+}
+.box-12 {
+  background-image: url(img/azriel.jpg);
+}
+.box-13 {
+  background-image: url(img/rey.jpg);
+}
+.box-14 {
+  background-image: url(img/arifin.jpg);
+}
+.box-15 {
+  background-image: url(img/fariz.jpg);
+}
+.box-16 {
+  background-image: url(img/panji.jpg);
+}
+.box-17 {
+  background-image: url(img/fachri\ reza.jpg);
+}
+.box-18 {
+  background-image: url(img/auriza.jpg);
+}
+.box-19 {
+  background-image: url(img/muhammad\ farel.jpg);
+}
+.box-20 {
+  background-image: url(img/khadafy.jpg);
+}
+.box-21 {
+  background-image: url(img/nadya.jpg);
+}
+.box-22 {
+  background-image: url(img/nazwati.jpg);
+}
+.box-23 {
+  background-image: url(img/nisa.jpg);
+}
+.box-24 {
+  background-image: url(img/rayhan.jpg);
+}
+.box-25 {
+  background-image: url();
+}
+.box-26 {
+  background-image: url(img/rifat.jpg);
+}
+.box-27 {
+  background-image: url(img/rifka.jpg);
+}
+.box-28 {
+  background-image: url(img/rizky\ maulana.jpg);
+}
+.box-29 {
+  background-image: url(img/rizky\ pratama.jpg);
+}
+.box-30 {
+  background-image: url(img/salsa.jpg);
+}
+.box-31 {
+  background-image: url(img/ulfah.jpg);
+}
+.box-32 {
+  background-image: url(img/zahran\ akhtar.jpg);
+}
+.box-34 {
+  background-image: url(img/zahran\ fairuz.jpg);
+}
+.box-35 {
+  background-image: url(img/zunius.jpg);
+}
+
+
+.navbar .logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .toggler-navbar {
+  margin-right: 15px;
+}
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: #b8b6b63f;
+  text-align: left;
+  font-size: 20px;
+  transform: rotate3d(0, 1, 0, 90deg);
+  transform-origin: left center;
+  transition: .5s;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar.open {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+.sidebar ul{
+  list-style: none;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: #0000003f;
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  display: block;
+  padding :15px 20px;
+  font-family:sans-serif ;
+}
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 2.5px;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 21px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  top: 14px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
